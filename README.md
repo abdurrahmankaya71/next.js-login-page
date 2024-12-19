@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Login Page
+
+This is a simple login page built using Next.js, TypeScript, Axios, `react-hook-form`, and `react-hot-toast`. The login process utilizes a fake API provided by [dummyjson](https://dummyjson.com/) to authenticate the user.
+
+## Features
+
+-   **Login Form**: A basic login form that uses `react-hook-form` for form handling.
+-   **Error Handling**: Displays toast notifications using `react-hot-toast` for successful or failed login attempts.
+-   **Fake API**: Uses [dummyjson](https://dummyjson.com/) fake API for simulating login functionality.
+-   **TypeScript**: The project is written in TypeScript to ensure type safety.
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have the following installed:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   [Node.js](https://nodejs.org/) (version 16 or higher)
+-   [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    https://github.com/abdurrahmankaya71/next.js-login-page.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install the dependencies: Using npm:
+   npm install
 
-## Deploy on Vercel
+3. Run the development server: Using npm:
+   npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Open your browser and go to http://localhost:3000
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Usage
+
+To successfully log in, use the following credentials:
+
+-   Username: emilys
+-   Password: emilyspass
+
+If the credentials are incorrect, the login will fail, and an error message will be displayed using react-hot-toast.
+
+### Demo
+
+You can also view a live demo of the project here: https://next-js-login-page-five.vercel.app/
+
+### Technologies Used
+
+-   Next.js: Framework for building the React application.
+-   TypeScript: For static typing.
+-   Axios: For making HTTP requests to the dummy API.
+-   react-hook-form: For handling form validation and submission.
+-   react-hot-toast: For showing success or error notifications.
