@@ -161,7 +161,10 @@ export default function LoginPage() {
                         </div>
 
                         {/* Sign-in Button */}
-                        <Button className={`${s.btnSubmit} ${s.btnFull}`}>
+                        <Button
+                            className={`${s.btnSubmit} ${s.btnFull}`}
+                            isLoading={isLoading}
+                        >
                             {isLoading ? "Loading..." : "Sign in"}
                         </Button>
 

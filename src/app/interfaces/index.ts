@@ -11,13 +11,14 @@ export interface IInputProps {
     };
 }
 
-export interface IErrorResponse {
-    error: {
-        details?: {
-            errors: {
-                message: string;
-            }[];
-        };
-        message?: string;
-    };
+export interface IInputErrorMsg {
+    msg?: string;
+}
+
+export interface IButtonProps {
+    onClick?: () => void;
+    children: React.ReactNode;
+    className?: string;
+    type?: "button";
+    isLoading?: boolean;
 }

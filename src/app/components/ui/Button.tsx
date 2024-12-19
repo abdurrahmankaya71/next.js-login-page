@@ -1,13 +1,19 @@
-interface IButtonProps {
-    onClick?: () => void;
-    children: React.ReactNode;
-    className?: string;
-    type?: "button";
-}
+import { IButtonProps } from "@/app/interfaces";
 
-const Button = ({ onClick, children, className, type }: IButtonProps) => {
+const Button = ({
+    onClick,
+    children,
+    className,
+    type,
+    isLoading = false,
+}: IButtonProps) => {
     return (
-        <button onClick={onClick} className={className} type={type}>
+        <button
+            onClick={onClick}
+            className={className}
+            type={type}
+            disabled={isLoading}
+        >
             {children}
         </button>
     );
