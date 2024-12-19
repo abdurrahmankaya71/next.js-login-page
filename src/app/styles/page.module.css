@@ -1,0 +1,275 @@
+.containerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 456px;
+    width: 100%;
+    padding: 20px;
+}
+
+.placeholderImage {
+    position: relative;
+    background-image: url(../../../public/images/placeholder.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    flex: 1;
+    pointer-events: none;
+}
+
+.placeholderImage > div {
+    position: absolute;
+    left: 48px;
+    bottom: 48px;
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: -0.2px;
+    line-height: 1rem;
+    pointer-events: all;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--black-900);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    width: max-content;
+}
+
+.textField {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.textFieldSpan {
+    color: var(--black-800);
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    line-height: 0.875rem;
+    padding: 0px 16px;
+}
+
+.textField .wrapperInput {
+    display: flex;
+    align-items: center;
+    background: var(--black-50);
+    border-radius: 6px;
+    border: 1px solid var(--black-100);
+}
+
+.wrapperInput:has(input:focus) {
+    outline: 2px solid var(--system-blue);
+}
+
+.inputError {
+    display: block;
+    color: red;
+    font-size: small;
+    padding: 0 8px;
+}
+
+.textField input {
+    background: none;
+    border: none;
+    color: var(--black-900);
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    outline: none;
+    padding: 8px 8px 8px 16px;
+    width: 100%;
+}
+
+.textField .btnIcon {
+    background: transparent;
+    display: block;
+    padding: 8px;
+}
+
+.btnSubmit:hover {
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1)
+        ),
+        var(--system-blue);
+}
+
+.btnGoogle:hover {
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1)
+        ),
+        var(--black-800);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px 16px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.containerToggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.containerToggle span {
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    line-height: 1.25rem;
+}
+
+.toggle {
+    appearance: none;
+    position: relative;
+    background-color: var(--black-50);
+    border-radius: 20px;
+    border: 0.5px solid var(--black-100);
+    cursor: pointer;
+    transition: 200ms;
+    width: 40px;
+    height: 20px;
+}
+
+.toggle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    background: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: 200ms;
+    width: 16px;
+    height: 16px;
+}
+
+.toggle:checked {
+    background: var(--system-blue);
+    border-color: var(--system-blue);
+}
+
+.toggle:checked::before {
+    left: calc(100% - 16px - 2px);
+}
+
+.toggle:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        var(--black-50);
+}
+
+.toggle:checked:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        var(--system-blue);
+}
+
+.btnSubmit {
+    background-color: var(--system-blue);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-top: 32px;
+}
+
+.btnFull {
+    border-radius: 6px;
+    padding: 10px 24px;
+    width: 100%;
+}
+
+.btnGoogle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--black-800);
+    color: white;
+    font-size: 0.8rem;
+    padding: 10px 16px;
+}
+
+.containerLink {
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    line-height: 1.25rem;
+    margin-top: 24px;
+    text-align: center;
+}
+
+.containerLogoMobile {
+    display: none;
+    padding: 24px 0px;
+}
+
+.logoMobile {
+    font-size: 1rem;
+}
+
+.wrapperIcon {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/*! media query */
+/* small */
+@media (max-width: 768px) {
+    .placeholderImage div {
+        display: none;
+    }
+}
+/* extra small */
+@media (max-width: 576px) {
+    .containerContent {
+        gap: 0px;
+        padding: 24px 16px;
+    }
+
+    .textField {
+        margin-bottom: 12px;
+    }
+
+    .containerLogoMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+    .logoMobile {
+        color: var(--black-900);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .btnSubmit {
+        margin-top: 24px;
+    }
+
+    .hr {
+        margin: 24px 0px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
